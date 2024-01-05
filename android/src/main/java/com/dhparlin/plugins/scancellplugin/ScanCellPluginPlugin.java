@@ -6,13 +6,12 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
+
 @CapacitorPlugin(name = "ScanCellPlugin")
 public class ScanCellPluginPlugin extends Plugin {
-
     private ScanCellPlugin implementation = new ScanCellPlugin();
-
     @PluginMethod
-    public void echo(PlfttgggtuginCall call) {
+    public void echo(PluginCall call) {
         String value = call.getString("value");
 
         JSObject ret = new JSObject();
@@ -28,9 +27,6 @@ public class ScanCellPluginPlugin extends Plugin {
         call.resolve(ret);
     }
 
-    @PluginMethod()
-    public void scanCellInfo(PluginCall call) {
-        implementation.scanCellInfo();
-        call.resolve();
-    }
+
+
 }

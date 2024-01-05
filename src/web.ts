@@ -8,8 +8,12 @@ export class ScanCellPluginWeb extends WebPlugin implements ScanCellPluginPlugin
     return options;
   }
 
-  async testPluginMethod(options: { msg: string; }): Promise<{ value: string; }> {
+  async testPluginMethod(options: { msg: string }): Promise<{ value: string }> {
     alert(options.msg);
-    return {value: options.msg}
+    return { value: options.msg };
+  }
+
+  async startScanMethod(options: { msg: string }): Promise<{ value: string }> {
+    return { value: options.msg };
   }
 }

@@ -15,11 +15,8 @@ npx cap sync
 
 <docgen-index>
 
-- [scan-cell-plugin](#scan-cell-plugin)
-  - [Install](#install)
-  - [API](#api)
-    - [echo(...)](#echo)
-    - [testPluginMethod(...)](#testpluginmethod)
+* [`echo(...)`](#echo)
+* [`testPluginMethod(...)`](#testpluginmethod)
 
 </docgen-index>
 
@@ -28,7 +25,7 @@ npx cap sync
 
 ### echo(...)
 
-```
+```typescript
 echo(options: { value: string; }) => Promise<{ value: string; }>
 ```
 
@@ -43,7 +40,7 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 
 ### testPluginMethod(...)
 
-```
+```typescript
 testPluginMethod(options: { msg: string; }) => Promise<{ value: string; }>
 ```
 

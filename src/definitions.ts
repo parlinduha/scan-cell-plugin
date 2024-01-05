@@ -1,13 +1,17 @@
-
-declare module "@capacitor/core" {
+declare module '@capacitor/core' {
   interface PluginRegistry {
-      ScanCellPlugin: ScanCellPluginPlugin
+    ScanCellPlugin: ScanCellPluginPlugin;
   }
 }
 
-
-
 export interface ScanCellPluginPlugin {
   echo(options: { value: string }): Promise<{ value: string }>;
-  testPluginMethod(options: { msg: string }): Promise<{value: string}>;
+  testPluginMethod(options: { msg: string }): Promise<{ value: string }>;
+ 
 }
+
+export interface ScanCellPlugin {
+  startScanMethod(options: { msg: string }): Promise<{ value: string }>;
+}
+
+
