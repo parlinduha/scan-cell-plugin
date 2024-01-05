@@ -7,4 +7,9 @@ export class ScanCellPluginWeb extends WebPlugin implements ScanCellPluginPlugin
     console.log('ECHO', options);
     return options;
   }
+
+  async testPluginMethod(options: { msg: string; }): Promise<{ value: string; }> {
+    alert(options.msg);
+    return {value: options.msg}
+  }
 }
